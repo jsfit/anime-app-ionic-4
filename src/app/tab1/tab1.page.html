@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+        Percentage
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Value 1: </ion-label>
+        <ion-input type="number" [(ngModel)]="value1" (ngModelChange)="calculateOnChange('0')"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">percentage: </ion-label>
+        <ion-input type="number"   [(ngModel)]="percentage" (change)="calculateOnChange('1')"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Value 2: </ion-label>
+        <ion-input type="number" [(ngModel)]="value2" (change)="calculateOnChange('2')"></ion-input>
+    </ion-item><br/><br/><br/><br/>
+
+
+ <ion-item>
+      <ion-label position="floating">Value 1: </ion-label>
+      <ion-input type="number" [(ngModel)]="value21" (ngModelChange)="calculateOnChange2('0')"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">percentage: </ion-label>
+      <ion-input type="number"   [(ngModel)]="percentage2" (change)="calculateOnChange2('1')"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Value 2: </ion-label>
+      <ion-input type="number" [(ngModel)]="value22" (change)="calculateOnChange2('2')"></ion-input>
+  </ion-item><br/>
+  </ion-content>
