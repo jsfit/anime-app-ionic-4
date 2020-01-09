@@ -12,9 +12,10 @@ export class Tab1Page {
   value2: number;
   value21: number;
   percentage2: number;
+  store = DsService.inject()
   value22: number;
-  constructor(private store: DsService) {
-    store.findAll("user").then((d)=>{
+  constructor() {
+    this.store.findAll("user").then((d)=>{
       console.log(d)
     }) 
   

@@ -6,10 +6,11 @@ import { STORE } from '../models/store';
   providedIn: 'root'
 })
 export class DsService {
-  DS = STORE;
-  constructor() { }
+  constructor() { 
+    
+  }
 
-  findAll(query){
-    return this.DS.findAll(query);
+  public static inject(){
+    return STORE;
   }
 }
