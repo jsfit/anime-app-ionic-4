@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ThrowStmt } from '@angular/compiler';
+import { DsService } from '../ds.service';
 
 @Component({
   selector: 'app-tab1',
@@ -12,8 +12,14 @@ export class Tab1Page {
   value2: number;
   value21: number;
   percentage2: number;
+  store = DsService.inject()
   value22: number;
-  constructor() {}
+  constructor() {
+    this.store.findAll("user").then((d)=>{
+      console.log(d)
+    }) 
+  
+  }
 
   calculateOnChange(curPoint){
     switch(curPoint){
